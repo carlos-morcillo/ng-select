@@ -16,39 +16,41 @@
         "createDefaultProgram": true
       },
       "extends": [
-        "plugin:@angular-eslint/ng-cli-compat",
-        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "prefix": "ng",
-            "style": "kebab-case",
-            "type": "element"
-          }
-        ],
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "prefix": "ng",
-            "style": "camelCase",
-            "type": "attribute"
-          }
-        ],
-        "@typescript-eslint/consistent-type-assertions": "off",
-        "@typescript-eslint/member-delimiter-style": "off",
-        "@typescript-eslint/member-ordering": "off",
-        "@typescript-eslint/naming-convention": "off",
-        "@typescript-eslint/semi": "off",
-        "indent": "error",
-        "no-underscore-dangle": "off",
-        "prefer-arrow/prefer-arrow-functions": "off",
-        "spaced-comment": "error",
-        "quote-props": "off"
-      }
+				"jsdoc/newline-after-description": "off",
+				"@angular-eslint/no-output-rename": "off",
+				"@angular-eslint/no-output-native": "off",
+				"@angular-eslint/prefer-standalone": "off",
+				"@angular-eslint/component-selector": [
+					"error",
+					{
+						"prefix": "ng",
+						"style": "kebab-case",
+						"type": "element"
+					}
+				],
+				"@angular-eslint/directive-selector": [
+					"error",
+					{
+						"prefix": "ng",
+						"style": "camelCase",
+						"type": "attribute"
+					}
+				],
+				"@typescript-eslint/consistent-type-assertions": "off",
+				"@typescript-eslint/member-delimiter-style": "off",
+				"@typescript-eslint/member-ordering": "off",
+				"@typescript-eslint/naming-convention": "off",
+				"@typescript-eslint/semi": "off",
+				"indent": "off",
+				"no-underscore-dangle": "off",
+				"prefer-arrow/prefer-arrow-functions": "off",
+				"spaced-comment": "error",
+				"quote-props": "off"
+			}
     },
     {
       "files": [
@@ -66,5 +68,6 @@
         ]
       }
     }
-  ]
+  ],
+  "extends": ["prettier"]
 }

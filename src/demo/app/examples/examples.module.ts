@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgOptionHighlightModule } from '@ng-select/ng-option-highlight';
+
 import { NgSelectModule } from '@ng-select/ng-select';
 import { AppendToExampleComponent } from './append-to-example/append-to-example.component';
 import { BindingsCustomExampleComponent } from './bindings-custom-example/bindings-custom-example.component';
@@ -46,70 +46,61 @@ import { TemplateOptionExampleComponent } from './template-option-example/templa
 import { TemplateSearchExampleComponent } from './template-search-example/template-search-example.component';
 import { VirtualScrollExampleComponent } from './virtual-scroll-example/virtual-scroll-example.component';
 import { SearchEditableExampleComponent } from './search-editable-example/search-editable-example.component';
+import { TemplatePlaceholderExampleComponent } from './template-placeholder-example/template-placeholder-example.component';
+import { FixedPlaceholderExampleComponent } from './fixed-placeholder-example/fixed-placeholder-example.component';
+import { TemplateClearExampleComponent } from './template-clear-example/template-clear-example.component';
 
-
-const examples = [DataSourceBackendExampleComponent,
-    DataSourceArrayExampleComponent,
-    DataSourceOptionsExampleComponent,
-    FormsWithOptionsExampleComponent,
-    FormsSingleSelectExampleComponent,
-    FormsMultiSelectExampleComponent,
-    FormsAsyncDataExampleComponent,
-    FormsCustomTemplateExampleComponent,
-    BindingsDefaultExampleComponent,
-    BindingsNestedExampleComponent,
-    BindingsCustomExampleComponent,
-    SearchDefaultExampleComponent,
-    SearchCustomExampleComponent,
-    SearchAutocompleteExampleComponent,
-    TagsDefaultExampleComponent,
-    TagsCustomExampleComponent,
-    TagsBackendExampleComponent,
-    TagsClosedDropdownExampleComponent,
-    TemplateLabelExampleComponent,
-    TemplateOptionExampleComponent,
-    TemplateOptgroupExampleComponent,
-    TemplateHeaderFooterExampleComponent,
-    TemplateDisplayExampleComponent,
-    TemplateSearchExampleComponent,
-    TemplateLoadingExampleComponent,
-    MultiSelectDefaultExampleComponent,
-    MultiSelectHiddenExampleComponent,
-    MultiSelectLimitExampleComponent,
-    MultiSelectDisabledExampleComponent,
-    MultiSelectTemplateExampleComponent,
-    MultiSelectCustomExampleComponent,
-    MultiCheckboxExampleComponent,
-    MultiCheckboxGroupExampleComponent,
-    OutputEventsExampleComponent,
-    VirtualScrollExampleComponent,
-    DropdownPositionExampleComponent,
-    AppendToExampleComponent,
-    GroupDefaultExampleComponent,
-    GroupFunctionExampleComponent,
-    GroupSelectableExampleComponent,
-    GroupSelectableHiddenExampleComponent,
-    GroupChildrenExampleComponent,
-    SearchEditableExampleComponent,
+const examples = [
+	DataSourceBackendExampleComponent,
+	DataSourceArrayExampleComponent,
+	DataSourceOptionsExampleComponent,
+	FixedPlaceholderExampleComponent,
+	FormsWithOptionsExampleComponent,
+	FormsSingleSelectExampleComponent,
+	FormsMultiSelectExampleComponent,
+	FormsAsyncDataExampleComponent,
+	FormsCustomTemplateExampleComponent,
+	BindingsDefaultExampleComponent,
+	BindingsNestedExampleComponent,
+	BindingsCustomExampleComponent,
+	SearchDefaultExampleComponent,
+	SearchCustomExampleComponent,
+	SearchAutocompleteExampleComponent,
+	TagsDefaultExampleComponent,
+	TagsCustomExampleComponent,
+	TagsBackendExampleComponent,
+	TagsClosedDropdownExampleComponent,
+	TemplateLabelExampleComponent,
+	TemplatePlaceholderExampleComponent,
+	TemplateClearExampleComponent,
+	TemplateOptionExampleComponent,
+	TemplateOptgroupExampleComponent,
+	TemplateHeaderFooterExampleComponent,
+	TemplateDisplayExampleComponent,
+	TemplateSearchExampleComponent,
+	TemplateLoadingExampleComponent,
+	MultiSelectDefaultExampleComponent,
+	MultiSelectHiddenExampleComponent,
+	MultiSelectLimitExampleComponent,
+	MultiSelectDisabledExampleComponent,
+	MultiSelectTemplateExampleComponent,
+	MultiSelectCustomExampleComponent,
+	MultiCheckboxExampleComponent,
+	MultiCheckboxGroupExampleComponent,
+	OutputEventsExampleComponent,
+	VirtualScrollExampleComponent,
+	DropdownPositionExampleComponent,
+	AppendToExampleComponent,
+	GroupDefaultExampleComponent,
+	GroupFunctionExampleComponent,
+	GroupSelectableExampleComponent,
+	GroupSelectableHiddenExampleComponent,
+	GroupChildrenExampleComponent,
+	SearchEditableExampleComponent,
 ];
 
 @NgModule({
-    declarations: examples,
-    imports: [
-        NgSelectModule,
-        NgOptionHighlightModule,
-        FormsModule,
-        CommonModule,
-        ReactiveFormsModule
-    ],
-    exports: [
-        NgSelectModule,
-        NgOptionHighlightModule,
-        FormsModule,
-        CommonModule,
-        ReactiveFormsModule
-    ],
-    entryComponents: examples
+	imports: [NgSelectModule, FormsModule, CommonModule, ReactiveFormsModule, ...examples],
+	exports: [NgSelectModule, FormsModule, CommonModule, ReactiveFormsModule],
 })
-export class ExamplesModule {
-}
+export class ExamplesModule {}
